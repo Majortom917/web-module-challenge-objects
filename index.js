@@ -1,7 +1,7 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = { name: "Cafe Latte", price: 4, category: "Drinks" };
-const burger = { name: "Burger", price: 18, category: "Lunch" };
+//const burger = { name: "Burger", price: 18, category: "Lunch" };
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category: "Breakfast" };
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
@@ -31,20 +31,23 @@ and should return a number.
 
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+const burger = { 
+name: "Burger",
+ price: 18, 
+ category: "Lunch",
 
-function special( teacher, student, public) {
+ discount: function(special) {
  let cost
- if
-    (teacher) {cost= burger.price*0.25
+ if(special ==="teacher"){
+   return `${this.price - (this.price * 0.25)} 'Discount`
   }
-  else if (public){cost= burger.price*0.10
+  else if (special === "public"){
+    return `${this.price * 0.10} 'Discount`
   }
-  else if (student){cost= burger.price*.25};
-  return cost;
 }
+};
 
-
-console.log(special(teacher,burger.price))
+//console.log(burger.discount('teacher'))
 
 
 
@@ -63,7 +66,7 @@ const reviews = [{ name: "Daniela", rating: 5, feedback: "Beautiful atmosphere a
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log.reviews
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
